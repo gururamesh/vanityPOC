@@ -37,6 +37,10 @@ body {
     function updateParentURL() {
       alert('navigating to anohter page');
     }
+    function change_event()
+{
+    document.getElementById('my_tag').onclick = function(){new_func( alert('navigating to anohter page'));}
+}
   </script>
 </head>
 <body>
@@ -53,6 +57,11 @@ body {
   <h2>Top Navigation Example</h2>
   <p>Some content..</p>
 </div>
-
+ <a id="search_link" href="https://www.bing.com/">Click Me</a>
+  <div>
+    <button id="submit">Click Anchor</button>
+  </div>
+  
+  <a href="#" id="my_tag" onclick="change_event();" >My test</a>
 </body>
 </html>
