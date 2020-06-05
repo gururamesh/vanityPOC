@@ -35,17 +35,21 @@ body {
   <script language="javascript" type="text/javascript">
 
     function updateParentURL() {
+       alert('updateParentURL');
+       window.parent.postMessage(
+          'about us'
+        , "*");
    //  window.location.replace("http://orcvanitydemo.com/contact");
      
-       alert('navigating to another page'+window.location.href);
-       alert('navigating to another page'+window.top.location.href);
-      window.top.location.href = "http://orcvanitydemo.com/contact";
+       //alert('navigating to another page'+window.location.href);
+       //alert('navigating to another page'+window.top.location.href);
+      //window.top.location.href = "http://orcvanitydemo.com/contact";
    
     }
     function updateParentURLWithOutRefresh(){
       alert('updateParentURLWithOutRefresh');
        window.parent.postMessage(
-          'navigated to another page'
+          'Contacts'
         , "*");
 
 }
@@ -67,9 +71,9 @@ body {
 </div>
 
   
-  <button onclick="updateParentURL()">Update parent URL</button>
+  <button onclick="updateParentURL()">about us</button>
 
-    <button onclick="updateParentURLWithOutRefresh()">Update parent URL with out Refresh</button>
+    <button onclick="updateParentURLWithOutRefresh()">Contacts</button>
  
 </body>
 </html>
