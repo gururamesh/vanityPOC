@@ -42,10 +42,9 @@ body {
       window.top.location.href = "http://orcvanitydemo.com/contact";
    
     }
-    function updateParentURLWithOutRefresh()
-{
+    function updateParentURLWithOutRefresh(){
       alert('updateParentURLWithOutRefresh');
-  let frame = document.getElementById('myframe');
+     var frame = document.getElementById('myframe');
     alert('frame');
   frame.contentWindow.postMessage("On Page refresh", 'https://orcvanitydemo.com/');
           /* let stateObj = { id: "100" }; 
