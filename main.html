@@ -41,9 +41,11 @@ body {
       window.top.location.href = "http://orcvanitydemo.com/contact";
       window.top.location.href = "http://www.example.com"; 
     }
-    function change_event()
+    function updateParentURLWithOutRefresh()
 {
-    document.getElementById('my_tag').onclick = function(){new_func( alert('navigating to anohter page'));}
+           let stateObj = { id: "100" }; 
+            window.history.replaceState(stateObj, 
+                        "test", "/test"); 
 }
   </script>
 </head>
@@ -65,7 +67,7 @@ body {
   
   <button onclick="updateParentURL()">Update parent URL</button>
 
-  
+    <button onclick="updateParentURLWithOutRefresh()">Update parent URL with out Refresh</button>
  
 </body>
 </html>
