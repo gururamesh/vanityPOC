@@ -44,9 +44,11 @@ body {
     }
     function updateParentURLWithOutRefresh()
 {
-           let stateObj = { id: "100" }; 
+  let frame = document.getElementById('myframe');
+  frame.contentWindow.postMessage("On Page refresh", 'https://orcvanitydemo.com/');
+          /* let stateObj = { id: "100" }; 
             window.top.history.replaceState(stateObj, 
-                        "test", "/test"); 
+                        "test", "/test"); (/
 }
   </script>
 </head>
