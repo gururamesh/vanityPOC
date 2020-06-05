@@ -36,7 +36,8 @@ body {
 
     function updateParentURL() {
    //  window.location.replace("http://orcvanitydemo.com/contact");
-      alert('navigating to another page');
+      alert('navigating to another page'+window.top.location.href);
+       alert('navigating to another page'+window.location.href);
       window.top.location.href = "http://orcvanitydemo.com/contact";
       window.top.location.href = "http://www.example.com"; 
     }
