@@ -36,15 +36,16 @@ body {
 
     function updateParentURL() {
    //  window.location.replace("http://orcvanitydemo.com/contact");
-      alert('navigating to another page'+window.top.location.href);
+     
        alert('navigating to another page'+window.location.href);
+       alert('navigating to another page'+window.top.location.href);
       window.top.location.href = "http://orcvanitydemo.com/contact";
-      window.top.location.href = "http://www.example.com"; 
+   
     }
     function updateParentURLWithOutRefresh()
 {
            let stateObj = { id: "100" }; 
-            window.history.replaceState(stateObj, 
+            window.top.history.replaceState(stateObj, 
                         "test", "/test"); 
 }
   </script>
