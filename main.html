@@ -45,7 +45,7 @@ body {
   <script language="javascript" type="text/javascript">
 
     function updateParentURL(navigatingPage) {
-       alert('updateParentURL');
+     
        window.parent.postMessage(
           navigatingPage
         , "*");
@@ -56,9 +56,7 @@ body {
       //window.top.location.href = "http://orcvanitydemo.com/contact";
    
     }
-    function updateParentURLFromCurrentLocationObject(){
-      alert(window.location.href);
-      alert(window.location.pathname);
+    function updateParentURLFromCurrentLocationObject(){   
        window.parent.postMessage(
           window.location.pathname
         , "*");
